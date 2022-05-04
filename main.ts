@@ -8,7 +8,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
 })
-input.onButtonPressed(Button.B, function () {
+function i_will_follow_you () {
     music.playTone(262, music.beat(BeatFraction.Half))
     music.playTone(294, music.beat(BeatFraction.Half))
     music.playTone(349, music.beat(BeatFraction.Half))
@@ -51,5 +51,9 @@ input.onButtonPressed(Button.B, function () {
     music.playTone(392, music.beat(BeatFraction.Half))
     music.playTone(349, 2.5 * music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Whole))
+}
+input.onButtonPressed(Button.B, function () {
+    i_will_follow_you()
 })
 music.setVolume(200)
+i_will_follow_you()
